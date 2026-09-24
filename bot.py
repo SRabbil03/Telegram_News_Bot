@@ -140,7 +140,7 @@ async def receive_image_and_send(update: Update, context: ContextTypes.DEFAULT_T
         configuration.api_key['api-key'] = BREVO_API_KEY
         api_instance = sib_api_v3_sdk.TransactionalEmailsApi(sib_api_v3_sdk.ApiClient(configuration))
 
-        sender = {"name": "Telegram News Bot", "email": SENDER_EMAIL}
+        sender = {"name": "Sabbir Rahman Rabbil", "email": SENDER_EMAIL}
 
         for recipient in recipients:
             try:
