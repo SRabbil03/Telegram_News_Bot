@@ -1,0 +1,3 @@
+python-telegram-bot
+flask
+sib-api-v3-sdk
