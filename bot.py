@@ -12,10 +12,11 @@ from telegram.ext import (
     filters,
     ConversationHandler,
 )
+from telegram.request import HTTPXRequest
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 
-# ক্লাউড হোস্টিংয়ের পোর্ট বাইন্ডিং প্রবলেম সমাধানের জন্য ছোট একটি Flask সার্ভার
+# ক্লাউড হোস্টিংয়ের পোর্ট বাইন্ডিং প্রবলেম সমাধানের জন্য ছোট একটি Flask সার্ভার
 app_flask = Flask(__name__)
 
 @app_flask.route('/')
@@ -191,7 +192,14 @@ def main():
     flask_thread.daemon = True
     flask_thread.start()
 
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
+    # টাইমআউট সমস্যা সমাধানের জন্য HTTPXRequest কনফিগারেশন যুক্ত করা হয়েছে
+    custom_request = HTTPXRequest(
+        connect_timeout=30.0,
+        read_timeout=30.0,
+        write_timeout=30.0
+    )
+
+    app = ApplicationBuilder().token(BOT_TOKEN).request(custom_request).build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
