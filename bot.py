@@ -37,9 +37,12 @@ GET_NEWS, GET_RECIPIents, GET_IMAGE = range(3)
 
 # রিসিভারদের ড্রপডাউন/বাটন লিস্ট
 RECEIVER_LIST = [
-    {"name": "Friend 1", "email": "sabbirrahmanrabbil05@gmail.com"},
-    {"name": "Friend 2", "email": "230120.cse@student.just.edu.bd"},
-    {"name": "Friend 3", "email": "papilioxuthus02@gmail.com"},
+    {"name": "Adin", "email": "adinonlinenews@gmail.com"},
+    {"name": "Samakal", "email": "samakallokaloy@gmail.com"},
+    {"name": "Ittefaq", "email": "ittefaqdigital@gmail.com"},
+    {"name": "Sattaypath", "email": "sattyapath@gmail.com"},
+    {"name": "Samajer Kotha", "email": "samajerkatha@gmail.com"},
+    {"name": "Daily Sun", "email": "news@daily-sun.com"},
 ]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
