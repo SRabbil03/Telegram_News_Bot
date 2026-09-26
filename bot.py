@@ -43,6 +43,8 @@ RECEIVER_LIST = [
     {"name": "Sattaypath", "email": "sattyapath@gmail.com"},
     {"name": "Samajer Kotha", "email": "samajerkatha@gmail.com"},
     {"name": "Daily Sun", "email": "news@daily-sun.com"},
+    {"name": " Rabbil", "email": "sabbirrahmanrabbil05@gmail.com"},
+
 ]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
